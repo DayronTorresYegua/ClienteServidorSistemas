@@ -15,11 +15,11 @@ def cliente():
             s.connect((host, port))
             print(f"Conectado al servidor {host}:{port}")
             s.sendall(mensaje.encode('utf-8'))
-            print("Mensaje enviado correctamente")
+            print("Mensaje enviado")
         except ConnectionRefusedError:
             print("Error: No se pudo conectar al servidor")
         except Exception as e:
-            print(f"Error inesperado: {e}")
+            print(f"Error: {e}")
 
 if __name__ == "__main__":
     cliente()
